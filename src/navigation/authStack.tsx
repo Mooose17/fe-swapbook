@@ -6,7 +6,6 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import WelcomeScreen from "../screens/Welcome";
 import SignInScreen from "../screens/auth/SignInScreen";
 import SignOutScreen from "../screens/auth/SignUpScreen";
-import Listings from "../screens/listings/Listings";
 
 import { getHeaderTitle } from "../utils/getHeaderTitle";
 
@@ -25,7 +24,8 @@ export default function AuthStack() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-        screenOptions={{ headerStyle: { backgroundColor: "orange" } }}>
+        screenOptions={{ headerStyle: { backgroundColor: "orange" } }}
+      >
         <Drawer.Screen name="Welcome" component={WelcomeScreen} />
         <Drawer.Screen name="Sign In" component={SignInScreen} />
         <Drawer.Screen name="Sign Up" component={SignOutScreen} />
